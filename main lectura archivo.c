@@ -26,9 +26,7 @@ int main(int argc, char *argv[])
 {
   FILE *w;
   WAV archivo;
-  uint8_t *data;
   double time_to_advance;
-  double *y;
   uint32_t num_samples, bytes_to_advance;
 
 
@@ -71,12 +69,6 @@ int main(int argc, char *argv[])
         printf("Bytes avanzados: %d\n", bytes_to_advance);
         ++time_to_advance;
       }
-
-  
-    // Liberar la memoria y cerrar el archivo
-    free(data);
-    fclose(w);
-
 
 
   
