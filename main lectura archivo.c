@@ -55,8 +55,9 @@ int main(int argc, char *argv[])
 
   
     // Calcular el número de muestras de audio
-    num_samples = (archivo.chunkSize - 36) * 8         
-    /archivo.bitsPerSample /archivo.numChannels;
+  
+    num_samples =(archivo.sampleRate*archivo.bitsPerSample*archivo.numChannels)/8;
+    printf("Número de muestras de audio: %d\n", num_samples);
   
     // Solicitar el tiempo a avanzar al usuario
     printf("Introduce el tiempo a avanzar (en segundos): ");
